@@ -1,0 +1,22 @@
+{% if ft %}
+    <ul>
+    {% for f in ft %}
+        <li><b><a href="/index/{{ f.ft_name }}/">{{ f.ft_name }}</a></b></li>
+        <li>
+        
+        	<ul>
+        	{% for s in st %}
+        	{% if s.st_ft == f %}
+        		<li><a href="/index/{{f.ft_name}}/{{s.st_name}}">{{s.st_name}}</a></li>
+        	{% else %}
+        		<b>No record</b>
+        	{% endif %}
+        	{% endfor %}
+        	</ul>
+        
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No part are available.</p>
+{% endif %}

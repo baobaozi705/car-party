@@ -1,0 +1,24 @@
+{% if st %}
+    <ul>
+    {% for s in st %}
+
+        <!-- <li><a href="/index/{{f.ft_name}}/{{s.st_name}}/">{{ s.st_name }}</a></li> -->
+        <li><a href="{% url 'indexCarParty:item' f.ft_name s.st_name %}">{{s.st_name}}</a></li>
+        <!-- <li>
+        
+            <ul>
+            {% for s in st %}
+            {% if s.st_ft == f %}
+                <li><a href="/index/{{f.ft_name}}/{{s.st_name}}">{{s.st_name}}</a></li>
+            {% else %}
+                <b>No record</b>
+            {% endif %}
+            {% endfor %}
+            </ul>
+        
+        </li> -->
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No part are available.</p>
+{% endif %}
