@@ -23,9 +23,9 @@ def index(request):
 	# soutput=os.linesep+' '.join([s.st_name for s in st])
 	return render(request,'indexCarParty/index.html',context)
 
-class IndexView(generic.ListView):
-	template_name='indexCarParty/index.html'
-	context_object_name='index'
+# class IndexView(generic.ListView):
+# 	template_name='indexCarParty/index.html'
+# 	context_object_name='index'
 		
 		
 
